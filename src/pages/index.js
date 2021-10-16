@@ -1,4 +1,5 @@
 import * as React from "react"
+import {Link} from 'gatsby'
 
 const IndexPage = () => {
   return (
@@ -7,6 +8,8 @@ const IndexPage = () => {
       <h1>
         rogut blog
       </h1>
+      <p>I'm a junior front-end developer and I'm currently learning about Gatsby</p>
+      <Link to="/about">More about me</Link>
       
       
       <img
