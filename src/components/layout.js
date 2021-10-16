@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {Link} from "gatsby"
+import {Dino} from "./hero"
 import {
     container, 
     heading, 
@@ -21,6 +22,7 @@ const Layout = ({pageTitle, pageHeading, children}) => {
                     </li>
                 </ul>
             </nav>
+            <Dino/>
             <main>
                 <title>{pageTitle}</title>
                 <h1 className={heading}>{pageHeading}</h1>
