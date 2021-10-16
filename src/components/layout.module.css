@@ -1,0 +1,22 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+.heading {
+  color: rebeccapurple;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.nav-link-item {
+  margin-right: 15px;
+}
+.nav-link-text {
+  color: black;
+}
+.nav-link-text:hover {
+  color: rebeccapurple;
+}
