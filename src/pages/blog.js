@@ -1,29 +1,33 @@
 import * as React from "react"
 import Layout from '../components/layout'
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
-const Blog = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            allFile {
-                nodes {
-                    name
-                }
-            }
-        }
-
-    `)
+const Blog = ({data}) => {
     return (
         <Layout
             pageTitle="Blog"
             pageHeading="Blog"
         >
             <p>Tutaj mozesz zapoznac sie z moimi przemysleniami na bardzo rozne tematy</p>
-            {data.allFile.nodes.map(post => {
-                return <h3>{post.name}</h3>
-            })}
+            <ul>
+                {data.allFile.nodes.map(post => {
+                    return (
+                        <li key={post.name}><Link to={post.name}>{post.name}</Link></li>
+                    )
+                })}
+            </ul>
         </Layout>
     )
 }
+
+export const query = graphql`
+    query {
+        allFile {
+            nodes {
+                name
+            }
+        }
+    }
+`
 
 export default Blog
