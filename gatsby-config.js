@@ -13,5 +13,12 @@ module.exports = {
         path: `${__dirname}/blogpost`,
       }
     },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/blogpost`,
+      },
+    },
+    "gatsby-plugin-mdx",
   ],
 };
